@@ -3,19 +3,11 @@
     <head>
         <meta charset="utf-8">
         <script async src="./amp-lib/v0.js"></script>
-        <!-- Needed to run amp stories -->
         <script async custom-element="amp-story" src="./amp-lib/v0/amp-story-1.0.js"></script>
-
         <script async custom-element="amp-story-auto-ads" src="./amp-lib/v0/amp-story-auto-ads-0.1.js"></script>
-
-        <!-- Needed to use videos -->
         <script async custom-element="amp-video" src="./amp-lib/v0/amp-video-0.1.js"></script>
-
-        <!-- Needed for Analytics -->
         <script async custom-element="amp-analytics" src="./amp-lib/v0/amp-analytics-0.1.js"></script>
-
         <script async custom-element="amp-consent" src="./amp-lib/v0/amp-consent-0.1.js"></script>
-
         <script async custom-element="amp-geo" src="./amp-lib/v0/amp-geo-0.1.js"></script>
         <script async custom-element="amp-access" src="./amp-lib/v0/amp-access-0.1.js"></script>
         <script async custom-template="amp-mustache" src="./amp-lib/v0/amp-mustache-0.2.js"></script>
@@ -24,78 +16,24 @@
         <link rel="canonical" href="index.html" />
         <link rel="shorturl" href="#" />
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-        <style amp-boilerplate>
-            body {
-                -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-                -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-                -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-                animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        
+        <style amp-boilerplate>body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+        <style amp-custom>            
+            @font-face {
+                font-family: "decor";
+                src: url(fonts/decord41d.eot?) format("embedded-opentype"), url(fonts/decor.woff) format("woff"), url(fonts/decor.ttf) format("truetype"), url(fonts/decor.svg#web) format("svg");
             }
-            
-            @-webkit-keyframes -amp-start {
-                from {
-                    visibility: hidden
-                }
-                to {
-                    visibility: visible
-                }
-            }
-            
-            @-moz-keyframes -amp-start {
-                from {
-                    visibility: hidden
-                }
-                to {
-                    visibility: visible
-                }
-            }
-            
-            @-ms-keyframes -amp-start {
-                from {
-                    visibility: hidden
-                }
-                to {
-                    visibility: visible
-                }
-            }
-            
-            @-o-keyframes -amp-start {
-                from {
-                    visibility: hidden
-                }
-                to {
-                    visibility: visible
-                }
-            }
-            
-            @keyframes -amp-start {
-                from {
-                    visibility: hidden
-                }
-                to {
-                    visibility: visible
-                }
-            }
-        </style>
-        <noscript>
-            <style amp-boilerplate>
-                body {
-                    -webkit-animation: none;
-                    -moz-animation: none;
-                    -ms-animation: none;
-                    animation: none
-                }
-            </style>
-        </noscript>
 
-        <style amp-custom>
+            amp-story-grid-layer{
+                padding: 34px 24px;
+            }
+
             [template="fill"] {
                 color: #fff
             }
-            
-            [template="fill"]:before,
-            [template="fill"]:after {
-                font-family: "FontAwesome";
+
+            [template="fill"]:before, [template="fill"]:after {
+                font-family: "decor";
                 font-size: 40px;
                 display: block;
                 position: absolute;
@@ -104,287 +42,181 @@
                 padding: 0 5px;
                 pointer-events: none
             }
-            
-            @media (min-width: 1024px) {
+
+            [template="fill"]:before {
+                content: "\f104";
+                left: 0;
+                z-index: 200
+            }
+
+            [template="fill"]:after {
+                content: "\f105";
+                right: 0;
+                z-index: 200
+            }
+            @media(min-width:1024px) {
                 [template="fill"]:before,
-                [template="fill"]:after {
+                [template="fill"]:after,
+                .graphic:before,
+                .graphic:after {
                     font-size: 70px;
                     padding: 0 10px;
                     display: none
                 }
             }
-            
-            [template="fill"]:before {
-                content: '\f104';
-                left: 0;
-                z-index: 200
-            }
-            
-            #slide_0 [template="fill"]:before {
-                position: absolute;
-                font-family: "FranklinITCProBold", Helvetica, Arial, sans-serif;
-                content: "Tap to read";
-                padding-right: 5px;
-                font-size: 13px;
-                left: auto;
-                z-index: 200;
-                right: 20px
-            }
-            
-            @media (min-width: 1024px) {
-                #slide_0 [template="fill"]:before {
-                    color: white;
-                    right: 105px;
-                    font-size: 16px;
-                    content: "Read more";
-                    top: 50%;
-                    bottom: auto;
-                    transform: none;
-                    display: block;
-                    transform: translate3d(0, -50%, 0)
-                }
-            }
-            
-            [template="fill"]:after {
-                content: '\f105';
-                right: 0;
-                z-index: 200
-            }
-            
-            [class*="amphtml-story-grid-template-fill"].contain>amp-img img,
-            [class*="amphtml-story-grid-template-fill"].contain>amp-video video {
-                object-fit: contain
-            }
-            
-            @media (min-width: 750px) {
-                [class*="amphtml-story-grid-template-fill"].right>amp-img img,
-                [class*="amphtml-story-grid-template-fill"].right>amp-video video {
-                    min-width: calc(50% - 60px);
-                    left: auto;
-                    right: 30px
-                }
-                [class*="amphtml-story-grid-template-fill"].left>amp-img img,
-                [class*="amphtml-story-grid-template-fill"].left>amp-video video {
-                    min-width: calc(50% - 60px);
-                    right: auto;
-                    left: 30px
-                }
-                [class*="amphtml-story-grid-template-fill"].centered>amp-img img,
-                [class*="amphtml-story-grid-template-fill"].centered>amp-video video {
-                    min-width: calc(50% - 60px);
-                    left: 0;
-                    right: 0
-                }
-                amp-story-grid-layer[template="vertical"].right {
-                    padding-left: calc(50% + 30px)
-                }
-                amp-story-grid-layer[template="vertical"].left {
-                    padding-right: calc(50% + 30px)
-                }
-            }
-            
-            amp-story-page h1 {
-                color: #fff;
-                font-size: 2rem;
-                font-family: "PostoniStandardBold", Georgia, serif;
-                font-weight: normal;
-                line-height: 2.5rem;
-                max-width: 100%
-            }
-            
-            @media (min-width: 750px) {
-                amp-story-page h1 {
-                    justify-self: center;
-                    width: calc(50% - 60px);
-                    max-width: 580px
-                }
-            }
-            
-            amp-story-page h2 {
-                font-size: 1.4rem;
-                font-family: "PostoniStandardRegular", Georgia, serif;
-                font-weight: normal;
-                color: #fff;
-                max-width: 100%
-            }
-            
-            @media (min-width: 750px) {
-                amp-story-page h2 {
-                    justify-self: center;
-                    width: calc(50% - 60px);
-                    max-width: 580px;
-                    font-size: 2rem;
-                    line-height: 2.4rem
-                }
-            }
-            
-            amp-story p {
-                font-family: georgia, serif;
-                font-size: 1rem;
-                line-height: 1.5rem;
-                max-width: 100%;
-                color: #fff;
-                justify-self: center
-            }
-            
+
             amp-story p.byline {
-                color: #aaa;
-                font-family: "FranklinITCProBold", Helvetica, Arial, sans-serif;
-                font-size: .8em;
-                display: inline-block
+                color: white;
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                word-spacing: 1px;
+                letter-spacing: 0px;
+                display: inline-block;
+                font-weight: 600;
             }
-            
-            amp-story p.byline .date {
-                display: inline-block
-            }
-            
+
             amp-story p.tagline {
-                font-size: .8rem;
+                font-size: 13px;
                 font-family: "FranklinITCProBold", Helvetica, Arial, sans-serif;
-                color: #fff
+                color: #fff;
+                font-weight: bold;
             }
-            
-            @media (max-width: 350px) {
+
+            @media (max-width: 240px) {
                 amp-story p {
-                    font-size: .9em
-                }
-            }
-            
-            @media (min-width: 750px) {
-                amp-story p {
-                    justify-self: center;
-                    width: calc(50% - 60px);
-                    max-width: 580px
+                    font-size: .9em;
                 }
             }
 
             .pg-headline {
                 display: -ms-grid;
                 display: grid;
-                max-width: 580px;
+                max-width: 800px;
                 justify-self: center;
-                grid-row-gap: 14px
+                grid-row-gap: 14px;
             }
-            
+
             .pg-headline>* {
                 max-width: 100%;
-                width: 100%
+                width: 100%;
             }
-            
-            amp-story-page {
-                background-color: #000
-            }
-            
+
             .gradient--bottom {
-                background: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, 0.8))
+                background: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, 0.8));
             }
 
             .gradient--top {
-                background: linear-gradient(to top, transparent, transparent 50%, rgba(0, 0, 0, 0.8))
+                background: linear-gradient(to top, transparent, transparent 50%, rgba(0, 0, 0, 0.8));
             }
-            
+
             amp-story-grid-layer.top {
                 -ms-flex-line-pack: start;
                 align-content: start;
                 -ms-flex-align: start;
-                align-items: start
+                align-items: start;
             }
-            
+
             amp-story-grid-layer.center {
                 -ms-flex-line-pack: center;
                 align-content: center;
                 -ms-flex-align: center;
-                align-items: center
+                align-items: center;
             }
-            
+
             amp-story-grid-layer.bottom {
                 -ms-flex-line-pack: end;
                 align-content: end;
                 -ms-flex-align: end;
-                align-items: end
+                align-items: end;
             }
-            
+            @media (min-width: 240px) {
+                .tagbody {
+                    font-size: 36px;
+                    color: #fff;
+                    font-weight: 600;
+                }
+            }
             @media (min-width: 750px) {
-                amp-story-grid-layer.desktop-top {
-                    -ms-flex-line-pack: start;
-                    align-content: start;
-                    -ms-flex-align: start;
-                    align-items: start
-                }
-                amp-story-grid-layer.desktop-center {
-                    -ms-flex-line-pack: center;
-                    align-content: center;
-                    -ms-flex-align: center;
-                    align-items: center
-                }
-                amp-story-grid-layer.desktop-bottom {
-                    -ms-flex-line-pack: end;
-                    align-content: end;
-                    -ms-flex-align: end;
-                    align-items: end
+                .tagbody {
+                    font-size: 60px;
+                    color: #fff;
                 }
             }
-            
-            amp-story-grid-layer.logo-layer {
-                -ms-flex-line-pack: start;
-                align-content: start;
-                -ms-flex-align: start;
-                align-items: start;
-                -ms-grid-column-align: center;
-                justify-items: center
+            .user-wrap .extra {
+            	height: 40px;
+            	display: -webkit-flex;
+            	display: -moz-flex;
+            	display: -ms-flex;
+            	display: -o-flex;
+            	display: flex;
+            	flex-wrap: wrap;
+            	padding-right: 10px;
+            	margin-top: 10px;
             }
-            
-            @media (min-width: 750px) {
-                .mobile-blur img {
-                    filter: none
-                }
+            .user-wrap .name, .user-wrap .font_body {
+            	display: block;
+            	width: 100%;
             }
+
             .name {
-                font-size: 100%;
+                font-size: 14px;
+                color: #fff;
+                font-weight: 700;
             }
+
             .font_body {
-                font-size: 80%;
+                font-size: 14px;
+                color: #fff;
+                font-weight: 500;
             }
+
             #italy_frame{
-                width: 10%;
-                padding-left: 1%;
-                padding-right: 2%;
-                background: #8D8D8D;
+                background: #767474c7;
                 mix-blend-mode: normal;
-                opacity: 0.5;
+                width: 55px;
+                opacity: 1;
                 border-radius: 4px;
+                padding: 3px 8px 1px 11px;
             }
+
+            .cover-logo {
+                border-radius: 50%;
+                margin: 0 0 50% 0;
+            }
+
+            .logo-txt {
+                float: left;
+                margin-right: 8px;
+                margin-top: 7px;
+            }
+
         </style>
     </head>
 
     <body>
         <amp-story standalone title="I live in Nis" publisher="Alex C." supports-landscape>
-            <amp-story-page id="slide_0">
+            <amp-story-page id="slide_0"> <!-- auto-advance-after="2s" -->
                 <amp-story-grid-layer template="fill">
-                    <amp-img src="img/Notre-Dame-001.jpg" width="1080" height="1920"></amp-img>
+                    <amp-img src="img/intro.jpg" width="1920" height="1080"></amp-img>
                 </amp-story-grid-layer>
                 <amp-story-grid-layer template="vertical" class="gradient--top top">
-                    <div>
-                        <div class="i-amphtml-story-bookend-article-image" style="float: left; margin-right: 20px">
-                            <amp-img src="img/Notre-Dame-001.jpg" width="100" height="100"></amp-img>
+                    <div class="user-wrap">
+                        <div class="i-amphtml-story-bookend-article-image logo-txt">
+                            <amp-img src="img/girl.svg" width="44" height="44" class="cover-logo" id="logos-img"></amp-img>
                         </div>
-                        <div class="i-amphtml-story-bookend-article-text-content">
-                            <h1 class="name">Francessa Gennari</h1>
-                            <h1 class="font_body">Lonely Planet Editor</h1>
+                        <div class="i-amphtml-story-bookend-article-text-content extra">
+                            <span class="name">Francessa Gennari</span>
+                            <span class="font_body">Lonely Planet Editor</span>
                         </div>
                     </div>
-                    
                 </amp-story-grid-layer>
                 <amp-story-grid-layer template="vertical" class="gradient--bottom bottom">
                     <div class="pg-headline">
                         <div id="italy_frame"><p class="tagline"><span>ITALY</span></p></div>
-                        <h1>Italy's most seductive region</h1>
+                        <span class="tagbody">Italy's most seductive region</span>
                         <p class="byline">An ethereal lignt on Tuscan hills</p>
                     </div>
                 </amp-story-grid-layer>
-            </amp-story-page>
-            <amp-story-page id="slide_1">
-                <amp-story-grid-layer template="fill" ></amp-story-grid-layer>
             </amp-story-page>
         </amp-story>
     </body>
