@@ -59,8 +59,7 @@
                 [template="fill"]:after,
                 .graphic:before,
                 .graphic:after {
-                    <!-- font-size: 70px; -->
-					font-size: 0.4375em;
+                    font-size: 70px;
                     padding: 0 10px;
                     display: none
                 }
@@ -206,10 +205,15 @@
 
     <body>
         <amp-story standalone title="I live in Nis" publisher="Alex C." supports-landscape>
-            <amp-story-page id="slide_0"> <!-- auto-advance-after="2s" -->
-                <amp-story-grid-layer template="fill">
-                    <amp-img src="img/intro.jpg" width="1920" height="1080"></amp-img>
-                </amp-story-grid-layer>
+            <amp-story-page id="slide_1"> <!-- auto-advance-after="2s" -->
+                <!-- <amp-story-grid-layer template="fill"> -->
+                    <!-- <amp-img src="img/intro.jpg" width="1920" height="1080"></amp-img> -->
+                <!-- </amp-story-grid-layer> -->
+				<amp-story-grid-layer template="fill">
+					<amp-video autoplay noaudio loop width="1920" height="1080" id="card2-video>
+						<source type="video/mp4" src="video/highlight.mp4">
+					</amp-video>
+				</amp-story-grid-layer>
                 <amp-story-grid-layer template="vertical" class="gradient--top top">
                     <div class="user-wrap">
                         <div class="i-amphtml-story-bookend-article-image logo-txt">
@@ -229,6 +233,14 @@
                     </div>
                 </amp-story-grid-layer>
             </amp-story-page>
+			
+			<!-- <amp-story-page id="slide_2"> -->
+				<!-- <amp-story-grid-layer template="fill"> -->
+					<!-- <amp-video autoplay noaudio loop width="1920" height="1080" id="card2-video> -->
+						<!-- <source type="video/mp4" src="./highlight.mp4"> -->
+					<!-- </amp-video> -->
+				<!-- </amp-story-grid-layer> -->
+			<!-- </amp-story-page> -->
         </amp-story>
     </body>
 </html>
