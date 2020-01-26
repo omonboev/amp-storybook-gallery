@@ -200,6 +200,25 @@
                 margin-top: 7px;
             }
 
+            amp-video.mobile {
+            	display: none;
+            }
+            amp-video.desktop {
+            	display: block;
+            }
+             .i-amphtml-story-draggable-drawer .i-amphtml-story-draggable-drawer-content {
+             	height: 100%;
+             	overflow: hidden;
+             }
+            @media (max-width: 992px) {
+            	amp-video.mobile {
+            		display: block;
+            	}
+            	amp-video.desktop {
+            		display: none;
+            	}
+            }
+
         </style>
     </head>
  <!-- auto-advance-after="3s" -->
@@ -231,7 +250,10 @@
 
             <amp-story-page id="slide_1" auto-advance-after="30s">
 				<amp-story-grid-layer template="fill">
-					<amp-video autoplay noaudio loop width="1440" height="960">
+					<amp-video autoplay noaudio loop width="1440" height="960" class="mobile">
+						<source type="video/mp4" src="video/video.MOV">
+					</amp-video>
+					<amp-video autoplay noaudio loop width="1440" height="960" class="desktop">
 						<source type="video/mp4" src="video/video.mp4">
 					</amp-video>
 				</amp-story-grid-layer>
@@ -255,15 +277,18 @@
                 </amp-story-grid-layer>
             </amp-story-page>
 
-            <amp-story-page id="ken-burns-effect1" auto-advance-after="5s">
+            <amp-story-page id="ken-burns-effect1"> <!-- auto-advance-after="5s" -->
                 <amp-story-grid-layer template="fill">
-                    <div animate-in="zoom-in" animate-in-duration="5s" class="img-container">
+                    <div animate-in="zoom-out" animate-in-duration="5s">
                       <amp-img id="ken-burns-img1" src="img/6W8A6061.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
                     </div>
                 </amp-story-grid-layer>
+                <amp-story-page-attachment layout="nodisplay" theme="dark" data-title="Offer Title" data-cta-text="Swipe up to get more info" >
+                    <iframe class="embedly-embed full-height" src="https://www.novasol.de/ferienhaeuser/italien/toskana/ferienhaus-montepulciano-its971?adults=2&children=0&pets=0" height="100%" width="100%"></iframe>
+                </amp-story-page-attachment>
             </amp-story-page>
 
-            <amp-story-page id="fade-in" auto-advance-after="5s">
+            <amp-story-page id="ken-burns-effect2" auto-advance-after="5s">
               <amp-story-grid-layer template="fill">
                 <div class="square" animate-in="fade-in" animate-in-duration="5s">
                     <amp-img id="ken-burns-img2" src="img/6W8A6110.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
@@ -271,39 +296,39 @@
               </amp-story-grid-layer>
             </amp-story-page>
 
-            <amp-story-page id="combining-animations" auto-advance-after="5s">
+            <amp-story-page id="ken-burns-effect3" auto-advance-after="5s">
                 <amp-story-grid-layer template="fill">
-                    <div animate-in="fly-in-left" animate-in-duration="2s" grid-area="middle-third">
+                    <div animate-in="fly-in-left" animate-in-duration="2s">
                       <amp-img id="ken-burns-img3" src="img/6W8A6117.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
                     </div>
                 </amp-story-grid-layer>
             </amp-story-page>
 
-            <amp-story-page id="twirl-in" auto-advance-after="5s">
+            <amp-story-page id="ken-burns-effect4" auto-advance-after="5s">
                 <amp-story-grid-layer template="fill">
-                    <div class="square" animate-in="twirl-in">
+                    <div class="square" animate-in="fly-in-bottom">
                         <amp-img id="ken-burns-img4" src="img/6W8A6134.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
                     </div>
                 </amp-story-grid-layer>
             </amp-story-page>
 
-            <amp-story-page id="rotate-in-left" auto-advance-after="5s">
+            <amp-story-page id="ken-burns-effect5" auto-advance-after="5s">
                 <amp-story-grid-layer template="fill">
-                    <div class="square" animate-in="rotate-in-left">
+                    <div class="square" animate-in="fly-in-top">
                         <amp-img id="ken-burns-img5" src="img/6W8A6221.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
                     </div>
                 </amp-story-grid-layer> 
             </amp-story-page>
 
-            <amp-story-page id="drop-in" auto-advance-after="5s">
+            <amp-story-page id="ken-burns-effect6" auto-advance-after="5s">
                 <amp-story-grid-layer template="fill">
-                    <div class="circle" animate-in="drop">
+                    <div class="circle" animate-in="whoosh-in-left">
                         <amp-img id="ken-burns-img6" src="img/DJI_0031.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
                     </div>
                 </amp-story-grid-layer>
             </amp-story-page>
 
-            <amp-story-page id="whoosh-in-right" auto-advance-after="5s">
+            <amp-story-page id="ken-burns-effect7" auto-advance-after="5s">
                 <amp-story-grid-layer template="fill">
                     <div class="square" animate-in="whoosh-in-right">
                         <amp-img id="ken-burns-img6" src="img/DJI_0058.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
