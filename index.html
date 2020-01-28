@@ -1,344 +1,474 @@
 <!doctype html>
 <html amp lang="en">
-    <head>
-        <meta charset="utf-8">
-        <script async src="https://cdn.ampproject.org/v0.js"></script>
-        <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
-        <script async custom-element="amp-story-auto-ads" src="https://cdn.ampproject.org/v0/amp-story-auto-ads-0.1.js"></script>
-        <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
-        <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-        <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
-        <script async custom-element="amp-geo" src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"></script>
-        <script async custom-element="amp-access" src="https://cdn.ampproject.org/v0/amp-access-0.1.js"></script>
-        <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 
-        <title>Michael Grillhoesl</title>
-        <link rel="canonical" href="index.html" />
-        <link rel="shorturl" href="#" />
-        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <script async custom-element="amp-story-auto-ads" src="https://cdn.ampproject.org/v0/amp-story-auto-ads-0.1.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
+    <script async custom-element="amp-geo" src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"></script>
+    <script async custom-element="amp-access" src="https://cdn.ampproject.org/v0/amp-access-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+
+    <title>Michael Grillhoesl</title>
+    <link rel="canonical" href="index.html" />
+    <link rel="shorturl" href="#" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
         
-        <style amp-boilerplate>body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-        <style amp-custom>            
-            @font-face {
-                font-family: "decor";
-                src: url(fonts/decord41d.eot?) format("embedded-opentype"), url(fonts/decor.woff) format("woff"), url(fonts/decor.ttf) format("truetype"), url(fonts/decor.svg#web) format("svg");
-            }
-
-            amp-story-grid-layer{
-                padding: 34px 24px;
-            }
-
-            [template="fill"] {
-                color: #fff
-            }
-
-            [template="fill"]:before, [template="fill"]:after {
-                font-family: "decor";
-                font-size: 40px;
-                display: block;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                padding: 0 5px;
-                pointer-events: none
-            }
-
-            [template="fill"]:before {
-                content: "\f104";
-                left: 0;
-                z-index: 200
-            }
-
-            [template="fill"]:after {
-                content: "\f105";
-                right: 0;
-                z-index: 200
-            }
-            @media(min-width:1024px) {
-                [template="fill"]:before,
-                [template="fill"]:after,
-                .graphic:before,
-                .graphic:after {
-                    font-size: 70px;
-                    padding: 0 10px;
-                    display: none
-                }
-            }
-            amp-story {
-            	/*Base font size*/
-            	font-size: 16px;
-            }
-
-            amp-story p.byline {
-                color: white;
-                font-family: Helvetica, Arial, sans-serif;
-                /*font-size: 14px;*/
-                font-size: 0.875em;	
-                word-spacing: 1px;
-                letter-spacing: 0px;
-                display: inline-block;
-                font-weight: 600;
-            }
-
-            amp-story p.tagline {
-                /*font-size: 13px;*/
-                font-size: 0.813em;
-                font-family: "FranklinITCProBold", Helvetica, Arial, sans-serif;
-                color: #fff;
-                font-weight: bold;
-            }
-
-            @media (max-width: 240px) {
-                amp-story p {
-                    font-size: .9em;
-                }
-            }
-
-            .pg-headline {
-                display: -ms-grid;
-                display: grid;
-                max-width: 800px;
-                justify-self: center;
-                grid-row-gap: 14px;
-            }
-
-            .pg-headline>* {
-                max-width: 100%;
-                width: 100%;
-            }
-
-            .gradient--bottom {
-                background: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, 0.8));
-            }
-
-            .gradient--top {
-                background: linear-gradient(to top, transparent, transparent 50%, rgba(0, 0, 0, 0.8));
-            }
-
-            amp-story-grid-layer.top {
-                -ms-flex-line-pack: start;
-                align-content: start;
-                -ms-flex-align: start;
-                align-items: start;
-            }
-
-            amp-story-grid-layer.center {
-                -ms-flex-line-pack: center;
-                align-content: center;
-                -ms-flex-align: center;
-                align-items: center;
-            }
-
-            amp-story-grid-layer.bottom {
-                -ms-flex-line-pack: end;
-                align-content: end;
-                -ms-flex-align: end;
-                align-items: end;
-            }
-            @media (min-width: 240px) {
-                .tagbody {
-                    /*font-size: 36px;*/
-                    font-size: 2.250em;
-                    color: #fff;
-                    font-weight: 600;
-                }
-            }
-            @media (min-width: 750px) {
-                .tagbody {
-                    /*font-size: 60px;*/
-                    font-size: 3.750em;
-                    color: #fff;
-                }
-            }
-            .user-wrap .extra {
-            	height: 40px;
-            	display: -webkit-flex;
-            	display: -moz-flex;
-            	display: -ms-flex;
-            	display: -o-flex;
-            	display: flex;
-            	flex-wrap: wrap;
-            	padding-right: 10px;
-            	margin-top: 10px;
-            }
-            .user-wrap .name, .user-wrap .font_body {
-            	display: block;
-            	width: 100%;
-            }
-
-            .name {
-                /*font-size: 14px;*/
-                font-size: 0.875em;
-                color: #fff;
-                font-weight: 700;
-            }
-
-            .font_body {
-                /*font-size: 14px;*/
-                font-size: 0.875em;
-                color: #fff;
-                font-weight: 500;
-            }
-
-            #italy_frame{
-                background: #767474c7;
-                mix-blend-mode: normal;
-                width: 55px;
-                opacity: 1;
-                border-radius: 4px;
-                padding: 3px 8px 1px 11px;
-            }
-
-            .cover-logo {
-                border-radius: 50%;
-                margin: 0 0 50% 0;
-            }
-
-            .logo-txt {
-                float: left;
-                margin-right: 8px;
-                margin-top: 7px;
-            }
-
-            amp-video.mobile {
-            	display: none;
-            }
-            amp-video.desktop {
-            	display: block;
-            }
-            .i-amphtml-story-draggable-drawer .i-amphtml-story-draggable-drawer-content {
-            	height: 100%;
-             	overflow: hidden;
-            }
-            .i-amphtml-story-draggable-drawer {
-                min-height: 80% !important;
-                min-width: 66% !important;
-            }
-            @media (max-width: 992px) {
-            	amp-video.mobile {
-            		display: block;
-            	}
-            	amp-video.desktop {
-            		display: none;
-            	}
-            }
-
+        @-webkit-keyframes -amp-start {
+            from { visibility: hidden }
+            to {visibility: visible}
+        }
+        
+        @-moz-keyframes -amp-start {
+            from { visibility: hidden }
+            to { visibility: visible }
+        }
+        
+        @-ms-keyframes -amp-start {
+            from { visibility: hidden }
+            to { visibility: visible }
+        }
+        
+        @-o-keyframes -amp-start {
+            from { visibility: hidden }
+            to { visibility: visible }
+        }
+        
+        @keyframes -amp-start {
+            from { visibility: hidden }
+            to { visibility: visible }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {-webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none}
         </style>
-    </head>
- <!-- auto-advance-after="3s" -->
-    <body>
-        <amp-story standalone title="I live in Nis" publisher="Alex C." supports-landscape>
-			<amp-story-page id="slide_0" auto-advance-after="3s">
-                <amp-story-grid-layer template="fill">
-                    <amp-img src="img/intro.jpg" width="1440" height="960"></amp-img>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical" class="gradient--top top">
-                    <div class="user-wrap">
-                        <div class="i-amphtml-story-bookend-article-image logo-txt">
-                            <amp-img src="img/girl.svg" width="45" height="45" class="cover-logo" id="logos-img"></amp-img>
-                        </div>
-                        <div class="i-amphtml-story-bookend-article-text-content extra">
-                            <span class="name">Francessa Gennari</span>
-                            <span class="font_body">Lonely Planet Editor</span>
-                        </div>
-                    </div>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical" class="gradient--bottom bottom">
-                    <div class="pg-headline">
-                        <div id="italy_frame"><p class="tagline"><span>ITALY</span></p></div>
-                        <span class="tagbody">Italy's most seductive region</span>
-                        <p class="byline">An ethereal lignt on Tuscan hills</p>
-                    </div>
-                </amp-story-grid-layer>
-            </amp-story-page>
+    </noscript>
+    <style amp-custom>
+        @font-face {
+            font-family: "decor";
+            src: url(fonts/decor/decord41d.eot?) format("embedded-opentype"), url(fonts/decor/decor.woff) format("woff"), url(fonts/decor/decor.ttf) format("truetype"), url(fonts/decor/decor.svg#web) format("svg");
+        }
+        @font-face {
+            font-family:'Gellix-regular';
+            src:url(fonts/gellix-cufonfonts/GellixRegular.otf) format("opentype")
+        }
 
-            <amp-story-page id="slide_1" auto-advance-after="30s">
-				<amp-story-grid-layer template="fill">
-					<amp-video autoplay noaudio loop width="1440" height="960" class="mobile">
-						<source type="video/mp4" src="video/video.MOV">
-					</amp-video>
-					<amp-video autoplay noaudio loop width="1440" height="960" class="desktop">
-						<source type="video/mp4" src="video/video.mp4">
-					</amp-video>
-				</amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical" class="gradient--top top">
-                    <div class="user-wrap">
-                        <div class="i-amphtml-story-bookend-article-image logo-txt">
-                            <amp-img src="img/girl.svg" width="45" height="45" class="cover-logo" id="logos-img"></amp-img>
-                        </div>
-                        <div class="i-amphtml-story-bookend-article-text-content extra">
-                            <span class="name">Francessa Gennari</span>
-                            <span class="font_body">Lonely Planet Editor</span>
-                        </div>
-                    </div>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical" class="gradient--bottom bottom">
-                    <div class="pg-headline">
-                        <div id="italy_frame"><p class="tagline"><span>ITALY</span></p></div>
-                        <span class="tagbody">Italy's most seductive region</span>
-                        <p class="byline">An ethereal lignt on Tuscan hills</p>
-                    </div>
-                </amp-story-grid-layer>
-            </amp-story-page>
+        @font-face {
+            font-family:'Gellix-medium';
+            src:url(fonts/gellix-cufonfonts/GellixMedium.otf) format("opentype")
+        }
 
-            <amp-story-page id="ken-burns-effect1"> <!-- auto-advance-after="5s" -->
-                <amp-story-grid-layer template="fill">
-                    <div animate-in="zoom-out" animate-in-duration="5s">
-                      <amp-img id="ken-burns-img1" src="img/6W8A6061.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
-                    </div>
-                </amp-story-grid-layer>
-                <amp-story-page-attachment layout="nodisplay" theme="dark" data-title="Offer Title" data-cta-text="Swipe up to get more info" >
-                    <iframe class="embedly-embed full-height" src="https://www.novasol.de/ferienhaeuser/italien/toskana/ferienhaus-montepulciano-its971?adults=2&children=0&pets=0" height="100%" width="100%"></iframe>
-                </amp-story-page-attachment>
-            </amp-story-page>
+        @font-face {
+            font-family:'Gellix-light';
+            src:url(fonts/gellix-cufonfonts/GellixLight.otf) format("opentype")
+        }
 
-            <amp-story-page id="ken-burns-effect2" auto-advance-after="5s">
-              <amp-story-grid-layer template="fill">
+        @font-face {
+            font-family:'Gellix-semi-bold';
+            src:url(fonts/gellix-cufonfonts/GellixSemiBold.otf) format("opentype")
+        }
+
+        @font-face {
+            font-family:'Gellix-bold';
+            src:url(fonts/gellix-cufonfonts/GellixBold.otf) format("opentype")
+        }
+
+        @font-face {
+            font-family:'Gellix-black';
+            src:url(fonts/gellix-cufonfonts/GellixBlack.otf) format("opentype")
+        }
+
+        body {
+            font-family:'Gellix-regular',sans-serif;
+            font-weight:400
+        }
+
+        amp-story-grid-layer {
+            padding:34px 24px
+        }
+
+        [template="fill"] {
+            color:#fff
+        }
+
+        [template="fill"]:before, [template="fill"]:after {
+            font-family:"decor";
+            font-size:40px;
+            display:block;
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            padding:0 5px;
+            pointer-events:none
+        }
+
+        [template="fill"]:before {
+            content:"\f104";
+            left:0;
+            z-index:200
+        }
+
+        [template="fill"]:after {
+            content:"\f105";
+            right:0;
+            z-index:200
+        }
+
+        @media(min-width:1024px) {
+            [template="fill"]:before,[template="fill"]:after,.graphic:before,.graphic:after {
+                font-size:70px;
+                padding:0 10px;
+                display:none
+            }
+        }
+
+        amp-story {
+            font-size:16px
+        }
+        amp-story-page .i-amphtml-story-page-open-attachment-label {
+            font-family: 'Gellix-bold', sans-serif!important;
+            height: 19px !important;
+        }
+
+        amp-story p.byline {
+            color:#fff;
+            font-family:"Gellix-medium",sans-serif;
+            font-size:.875em;
+            word-spacing:1px;
+            letter-spacing:0;
+            display:inline-block;
+            font-weight:600
+        }
+
+        amp-story span.byline_piazza {
+            color:#fff;
+            font-family:"Gellix-regular",sans-serif;
+            font-size:.75em;
+            word-spacing:1px;
+            letter-spacing:0;
+            display:inline-block
+        }
+
+        amp-story p.tagline {
+            font-size:.813em;
+            font-family:"Gellix-bold",sans-serif;
+            color:#fff;
+            font-weight:700;
+            padding-bottom:2px
+        }
+
+        @media (max-width: 240px) {
+            amp-story p {
+                font-size:.9em
+            }
+        }
+
+        .pg-headline {
+            display:-ms-grid;
+            display:grid;
+            max-width:825px;
+            justify-self:center;
+            grid-row-gap:14px
+        }
+
+        .pg-headline>* {
+            max-width:100%;
+            width:100%
+        }
+
+        .gradient--bottom {
+            background:linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,0.8))
+        }
+
+        .gradient--top {
+            background:linear-gradient(to top,transparent,transparent 50%,rgba(0,0,0,0.8))
+        }
+
+        amp-story-grid-layer.top {
+            -ms-flex-line-pack:start;
+            align-content:start;
+            -ms-flex-align:start;
+            align-items:start
+        }
+
+        amp-story-grid-layer.center {
+            -ms-flex-line-pack:center;
+            align-content:center;
+            -ms-flex-align:center;
+            align-items:center
+        }
+
+        amp-story-grid-layer.bottom {
+            -ms-flex-line-pack:end;
+            align-content:end;
+            -ms-flex-align:end;
+            align-items:end
+        }
+
+        @media (min-width: 240px) {
+            .tagbody {
+                font-size:2.25em;
+                color:#fff;
+                font-family:'Gellix-semi-bold',sans-serif;
+                font-weight:600
+            }
+        }
+
+        @media (min-width: 750px) {
+            .tagbody {
+                font-size:3.75em;
+                color:#fff
+            }
+        }
+
+        .user-wrap .extra {
+            display:-webkit-flex;
+            display:-moz-flex;
+            display:-ms-flex;
+            display:-o-flex;
+            display:flex;
+            flex-wrap:wrap;
+            -webkit-flex-direction:column;
+            -moz-flex-direction:column;
+            -ms-flex-direction:column;
+            -o-flex-direction:column;
+            flex-direction:column;
+            padding-right:10px;
+            margin-top:10px
+        }
+
+        .user-wrap .name,.user-wrap .font_body {
+            display:block;
+            width:100%
+        }
+
+        .name {
+            font-size:.915em;
+            color:#fff;
+            font-family:'Gellix-bold',sans-serif;
+            font-weight:700
+        }
+
+        .font_body {
+            font-size:.875em;
+            color:#fff;
+            font-family:'Gellix-medium',sans-serif;
+            font-weight:500
+        }
+
+        .name_piazza {
+            font-size:.7em;
+            color:#fff;
+            font-family:'Gellix-medium',sans-serif;
+            font-weight:500
+        }
+
+        .font_body_piazza {
+            font-size:1.5em;
+            color:#fff;
+            font-family:'Gellix-bold',sans-serif;
+            font-weight:700;
+            width:100%;
+            margin-bottom:.65em
+        }
+
+        #italy_frame {
+            background:#767474c7;
+            mix-blend-mode:normal;
+            width:55px;
+            opacity:1;
+            border-radius:4px;
+            padding:3px 8px 1px 11px
+        }
+
+        .cover-logo {
+            border-radius:50%;
+            margin:0 0 50%
+        }
+
+        .logo-txt {
+            float:left;
+            margin-right:8px;
+            margin-top:7px
+        }
+
+        amp-video.mobile {
+            display:none
+        }
+
+        amp-video.desktop {
+            display:block
+        }
+
+        .i-amphtml-story-draggable-drawer .i-amphtml-story-draggable-drawer-content {
+            height:100%;
+            overflow:hidden
+        }
+
+        .i-amphtml-story-draggable-drawer {
+            min-height:80%!important;
+            min-width:66%!important
+        }
+
+        @media (max-width: 992px) {
+            amp-video.mobile {
+                display:block
+            }
+
+            amp-video.desktop {
+                display:none
+            }
+        }
+    </style>
+</head>
+<!-- auto-advance-after="3s" -->
+
+<body>
+    <amp-story standalone title="I live in Nis" publisher="Alex C." supports-landscape>
+        <amp-story-page id="slide_0" auto-advance-after="3s">
+            <amp-story-grid-layer template="fill">
+                <amp-img src="img/intro.jpg" width="1440" height="960"></amp-img>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" class="gradient--top top">
+                <div class="user-wrap">
+                    <div class="i-amphtml-story-bookend-article-image logo-txt">
+                        <amp-img src="img/girl.svg" width="45" height="45" class="cover-logo" id="logos-img"></amp-img>
+                    </div>
+                    <div class="i-amphtml-story-bookend-article-text-content extra">
+                        <span class="name">Francessa Gennari</span>
+                        <span class="font_body">Lonely Planet Editor</span>
+                    </div>
+                </div>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" class="gradient--bottom bottom">
+                <div class="pg-headline">
+                    <div id="italy_frame">
+                        <p class="tagline"><span>ITALY</span></p>
+                    </div>
+                    <span class="tagbody">Italy's most seductive region</span>
+                    <p class="byline">An ethereal lignt on Tuscan hills</p>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="slide_1" auto-advance-after="30s">
+            <amp-story-grid-layer template="fill">
+                <amp-video autoplay noaudio loop width="1440" height="960" class="mobile">
+                    <source type="video/mp4" src="video/video.MOV">
+                </amp-video>
+                <amp-video autoplay noaudio loop width="1440" height="960" class="desktop">
+                    <source type="video/mp4" src="video/video.mp4">
+                </amp-video>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" class="gradient--top top">
+                <div class="user-wrap">
+                    <div class="i-amphtml-story-bookend-article-image logo-txt">
+                        <amp-img src="img/girl.svg" width="45" height="45" class="cover-logo" id="logos-img"></amp-img>
+                    </div>
+                    <div class="i-amphtml-story-bookend-article-text-content extra">
+                        <span class="name">Francessa Gennari</span>
+                        <span class="font_body">Lonely Planet Editor</span>
+                    </div>
+                </div>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" class="gradient--bottom bottom">
+                <div class="pg-headline">
+                    <div id="italy_frame">
+                        <p class="tagline"><span>ITALY</span></p>
+                    </div>
+                    <span class="tagbody">Italy's most seductive region</span>
+                    <p class="byline">An ethereal lignt on Tuscan hills</p>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="ken-burns-effect1">
+            <!-- auto-advance-after="5s" -->
+            <amp-story-grid-layer template="fill">
+                <div animate-in="zoom-out" animate-in-duration="5s">
+                    <amp-img id="ken-burns-img1" src="img/6W8A6061.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+            <amp-story-page-attachment layout="nodisplay" theme="dark" data-title="Offer Title" data-cta-text="Swipe up to get more info">
+                <iframe class="embedly-embed full-height" src="https://www.novasol.de/ferienhaeuser/italien/toskana/ferienhaus-montepulciano-its971?adults=2&children=0&pets=0" height="100%" width="100%"></iframe>
+            </amp-story-page-attachment>
+        </amp-story-page>
+
+        <amp-story-page id="ken-burns-effect2">
+            <!-- auto-advance-after="5s" -->
+            <amp-story-grid-layer template="fill">
                 <div class="square" animate-in="fade-in" animate-in-duration="5s">
                     <amp-img id="ken-burns-img2" src="img/6W8A6110.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
                 </div>
-              </amp-story-grid-layer>
-            </amp-story-page>
-
-            <amp-story-page id="ken-burns-effect3" auto-advance-after="5s">
-                <amp-story-grid-layer template="fill">
-                    <div animate-in="fly-in-left" animate-in-duration="2s">
-                      <amp-img id="ken-burns-img3" src="img/6W8A6117.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" class="gradient--top top">
+                <div class="user-wrap">
+                    <div class="i-amphtml-story-bookend-article-text-content extra">
+                        <span class="name_piazza">TOP ATTRACTIONS</span>
+                        <span class="font_body_piazza">2. Piazza del Campo</span>
+                        <span class="byline_piazza">Popularly known as 'Il Campo', this sloping piazza has been Siena's social centre since being staked out by the ruling Consiglio dei Nove (Council of Nine) in the mid-12th century.</span>
                     </div>
-                </amp-story-grid-layer>
-            </amp-story-page>
+                </div>
+            </amp-story-grid-layer>
+            <amp-story-page-attachment layout="nodisplay" theme="dark" data-title="Offer Title" data-cta-text="Learn More">
+                <iframe class="embedly-embed full-height" src="https://www.novasol.de/ferienhaeuser/italien/toskana/ferienhaus-montepulciano-its971?adults=2&children=0&pets=0" height="100%" width="100%"></iframe>
+            </amp-story-page-attachment>
+        </amp-story-page>
 
-            <amp-story-page id="ken-burns-effect4" auto-advance-after="5s">
-                <amp-story-grid-layer template="fill">
-                    <div class="square" animate-in="fly-in-bottom">
-                        <amp-img id="ken-burns-img4" src="img/6W8A6134.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
-                    </div>
-                </amp-story-grid-layer>
-            </amp-story-page>
+        <amp-story-page id="ken-burns-effect3" auto-advance-after="5s">
+            <amp-story-grid-layer template="fill">
+                <div animate-in="fly-in-left" animate-in-duration="2s">
+                    <amp-img id="ken-burns-img3" src="img/6W8A6117.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
 
-            <amp-story-page id="ken-burns-effect5" auto-advance-after="5s">
-                <amp-story-grid-layer template="fill">
-                    <div class="square" animate-in="fly-in-top">
-                        <amp-img id="ken-burns-img5" src="img/6W8A6221.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
-                    </div>
-                </amp-story-grid-layer> 
-            </amp-story-page>
+        <amp-story-page id="ken-burns-effect4" auto-advance-after="5s">
+            <amp-story-grid-layer template="fill">
+                <div class="square" animate-in="fly-in-bottom">
+                    <amp-img id="ken-burns-img4" src="img/6W8A6134.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
 
-            <amp-story-page id="ken-burns-effect6" auto-advance-after="5s">
-                <amp-story-grid-layer template="fill">
-                    <div class="circle" animate-in="whoosh-in-left">
-                        <amp-img id="ken-burns-img6" src="img/DJI_0031.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
-                    </div>
-                </amp-story-grid-layer>
-            </amp-story-page>
+        <amp-story-page id="ken-burns-effect5" auto-advance-after="5s">
+            <amp-story-grid-layer template="fill">
+                <div class="square" animate-in="fly-in-top">
+                    <amp-img id="ken-burns-img5" src="img/6W8A6221.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
 
-            <amp-story-page id="ken-burns-effect7" auto-advance-after="5s">
-                <amp-story-grid-layer template="fill">
-                    <div class="square" animate-in="whoosh-in-right">
-                        <amp-img id="ken-burns-img6" src="img/DJI_0058.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
-                    </div>
-                </amp-story-grid-layer>
-            </amp-story-page>
-        </amp-story>
-    </body>
+        <amp-story-page id="ken-burns-effect6" auto-advance-after="5s">
+            <amp-story-grid-layer template="fill">
+                <div class="circle" animate-in="whoosh-in-left">
+                    <amp-img id="ken-burns-img6" src="img/DJI_0031.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="ken-burns-effect7" auto-advance-after="5s">
+            <amp-story-grid-layer template="fill">
+                <div class="square" animate-in="whoosh-in-right">
+                    <amp-img id="ken-burns-img6" src="img/DJI_0058.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+    </amp-story>
+</body>
+
 </html>
