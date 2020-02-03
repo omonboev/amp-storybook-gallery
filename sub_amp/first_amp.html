@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html amp lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+		<script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+		<script async custom-element="amp-story-auto-ads" src="https://cdn.ampproject.org/v0/amp-story-auto-ads-0.1.js"></script>
+		<script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+		<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+		<script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
+		<script async custom-element="amp-geo" src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"></script>
+		<script async custom-element="amp-access" src="https://cdn.ampproject.org/v0/amp-access-0.1.js"></script>
+		<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+		<script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+
+		<title>Michael Grillhoesl's AMP stories</title>
+		<link rel="canonical" href="index.html" />
+		<link rel="shorturl" href="#" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+		<style amp-boilerplate> 
+			body {
+				-webkit-animation:-amp-start 8s steps(1, end) 0s 1 normal both;
+				-moz-animation:-amp-start 8s steps(1, end) 0s 1 normal both;
+				-ms-animation:-amp-start 8s steps(1, end) 0s 1 normal both;
+				animation:-amp-start 8s steps(1, end) 0s 1 normal both
+			}
+
+			@-webkit-keyframes -amp-start {
+				from { visibility:hidden }
+				to {visibility:visible}
+			}
+
+			@-moz-keyframes -amp-start {
+				from { visibility:hidden }
+				to { visibility:visible }
+			}
+
+			@-ms-keyframes -amp-start {
+				from { visibility:hidden }
+				to { visibility:visible }
+			}
+
+			@-o-keyframes -amp-start {
+				from { visibility:hidden }
+				to { visibility:visible }
+			}
+
+			@keyframes -amp-start {
+				from { visibility:hidden }
+				to { visibility:visible }
+			}
+		</style>
+
+		<noscript>
+			<style amp-boilerplate>
+				body {
+					-webkit-animation:none;
+					-moz-animation:none;
+					-ms-animation:none;
+					animation:none
+				}
+			</style>
+		</noscript>
+
+		<style amp-custom>
+			@font-face {
+				font-family:"decor";
+				src:url(../fonts/decor/decord41d.eot?) format("embedded-opentype"),
+					url(../fonts/decor/decor.woff) format("woff"),
+					url(../fonts/decor/decor.ttf) format("truetype"), 
+					url(../fonts/decor/decor.svg#web) format("svg");
+			}
+
+			@font-face {
+				font-family: 'Gellix';
+				src:url(../fonts/gellix-cufonfonts/GellixRegular.otf) format("opentype"), 
+					url(../fonts/gellix-cufonfonts/GellixMedium.otf) format("opentype"),
+					url(../fonts/gellix-cufonfonts/GellixLight.otf) format("opentype"), 
+					url(../fonts/gellix-cufononts/GellixSemiBold.otf) format("opentype"), 
+					url(../fonts/gellix-cufonfonts/GellixBold.otf) format("opentype"), 
+					url(../fonts/gellix-cufonfonts/GellixBlack.otf) format("opentype");
+			}
+
+			body {
+				font-family: 'Gellix';
+			}
+
+			amp-story-grid-layer {
+				padding:34px 24px
+			}
+
+			[template="fill"] {
+				color:#fff
+			}
+
+			[template="fill"]:before, [template="fill"]:after {
+				font-family:"decor";
+				font-size:40px;
+				display:block;
+				position:absolute;
+				top:50%;
+				transform:translateY(-50%);
+				padding:0 5px;
+				pointer-events:none
+			}
+
+			[template="fill"]:before {
+				content:"\f104";
+				left:0;
+				z-index:200
+			}
+
+			[template="fill"]:after {
+				content:"\f105";
+				right:0;
+				z-index:200
+			}
+
+			@media(min-width:1024px) {
+				[template="fill"]:before,[template="fill"]:after,.graphic:before,.graphic:after {
+					font-size:70px;
+					padding:0 10px;
+					display:none
+				}
+			}
+
+			amp-story {
+				font-size:16px
+			}
+
+			amp-story-page .i-amphtml-story-page-open-attachment-label {
+				font-weight: bold !important;
+				height:19px !important;
+			}
+
+			amp-story p.byline {
+				color:#fff;
+				font-size:.875em;
+				word-spacing:1px;
+				letter-spacing:0;
+				display:inline-block;
+			}
+
+			amp-story span.byline_piazza {
+				color:#fff;
+				font-size:1.2em;
+				word-spacing:1px;
+				letter-spacing:0;
+				display:inline-block
+			}
+
+			amp-story span.byline_lorem {
+				font-size:1.2em;
+			}
+
+			amp-story p.tagline {
+				font-size:.813em;
+				color:#fff;
+				font-weight:bold;
+				padding-bottom:2px
+			}
+
+			@media (max-width:240px) {
+				amp-story p {
+					font-size:.9em
+				}
+			}
+
+			.pg-headline {
+				display:-ms-grid;
+				display:grid;
+				max-width:825px;
+				justify-self:center;
+				grid-row-gap:14px
+			}
+
+			.pg-headline>* {
+				max-width:100%;
+				width:100%
+			}
+
+			amp-story-grid-layer.top {
+				-ms-flex-line-pack:start;
+				align-content:start;
+				-ms-flex-align:start;
+				align-items:start
+			}
+
+			amp-story-grid-layer.center {
+				-ms-flex-line-pack:center;
+				align-content:center;
+				-ms-flex-align:center;
+				align-items:center
+			}
+
+			amp-story-grid-layer.bottom {
+				-ms-flex-line-pack:end;
+				align-content:end;
+				-ms-flex-align:end;
+				align-items:end
+			}
+
+			@media (min-width:240px) {
+				.tagbody {
+					font-size:2.25em;
+					color:#fff;
+					font-weight: bold;
+				}
+			}
+
+			@media (min-width:750px) {
+				.tagbody {
+					font-size:3.75em;
+					color:#fff
+					font-weight: bold;
+				}
+			}
+
+			.user-wrap .extra {
+				display:-webkit-flex;
+				display:-moz-flex;
+				display:-ms-flex;
+				display:-o-flex;
+				display:flex;
+				flex-wrap:wrap;
+				-webkit-flex-direction:column;
+				-moz-flex-direction:column;
+				-ms-flex-direction:column;
+				-o-flex-direction:column;
+				flex-direction:column;
+				padding-right:10px;
+				margin-top:10px
+			}
+
+			.user-wrap .name, .user-wrap .font_body {
+				display:block;
+				width:100%
+			}
+
+			.name {
+				font-size:.915em;
+				color:#fff;
+				font-weight:bold
+			}
+
+			.name_lorem {
+				font-size:2.4em;
+				margin-bottom:.65em;
+				font-weight:bold;
+			}
+
+			.font_body {
+				font-size:.875em;
+				color:#fff;
+			}
+
+			.font_body_piazza {
+				font-size: 2em;
+				color:#fff;
+				font-weight:bold;
+				width:100%;
+				margin-bottom:.65em
+			}
+
+			#italy_frame {
+				background:#767474c7;
+				mix-blend-mode:normal;
+				width:55px;
+				opacity:1;
+				border-radius:4px;
+				padding:3px 8px 1px 11px
+			}
+
+			.cover-logo {
+				border-radius:50%;
+				margin:0 0 50%
+			}
+
+			.logo-txt {
+				float:left;
+				margin-right:8px;
+				margin-top:7px
+			}
+
+			amp-video.mobile {
+				display:none
+			}
+
+			amp-video.desktop {
+				display:block
+			}
+
+			.i-amphtml-story-draggable-drawer .i-amphtml-story-draggable-drawer-content {
+				height:100%;
+				overflow:hidden
+			}
+
+			.i-amphtml-story-draggable-drawer {
+				min-height:80%!important;
+				min-width:66%!important
+			}
+
+			@media (max-width:992px) {
+				amp-video.mobile {
+					display:block
+				}
+
+				amp-video.desktop {
+					display:none
+				}
+			}
+			@-webkit-keyframes scroll {
+				0% {
+					-webkit-transform: translateX(0);
+					transform: translateX(0);
+				}
+				100% {
+					-webkit-transform: translateX(calc(-250px * 4));
+					transform: translateX(calc(-250px * 4));
+				}
+			}
+
+			@keyframes scroll {
+				0% {
+					-webkit-transform: translateX(0);
+					transform: translateX(0);
+				}
+				100% {
+					-webkit-transform: translateX(calc(-250px * 4));
+					transform: translateX(calc(-250px * 4));
+				}
+			}
+			@-webkit-keyframes scroll-reverse {
+				0% {
+					-webkit-transform: translateX(calc(-250px * 4));
+					transform: translateX(calc(-250px * 4));
+					
+				}
+				100% {
+					-webkit-transform: translateX(0);
+					transform: translateX(0);
+				}
+			}
+
+			@keyframes scroll-reverse {
+				0% {
+					-webkit-transform: translateX(calc(-250px * 4));
+					transform: translateX(calc(-250px * 4));
+				}
+				100% {
+					-webkit-transform: translateX(0);
+					transform: translateX(0);
+				}
+			}
+			.slider {
+				min-height: 100px;
+				margin: auto;
+				height: auto;
+				overflow: hidden;
+				position: relative;
+				width: 960px;
+				margin: 12px auto;
+			}
+			.slider::before, .slider::after {
+				content: "";
+				height: 100%;
+				position: absolute;
+				width: 200px;
+				z-index: 2;
+			}
+			.slider::after {
+				right: 0;
+				top: 0;
+				-webkit-transform: rotateZ(180deg);
+				transform: rotateZ(180deg);
+			}
+			.slider::before {
+				left: 0;
+				top: 0;
+			}
+			.slider .slide-track {
+				-webkit-animation: scroll 35s linear infinite;
+				animation: scroll 35s linear infinite;
+				display: -webkit-box;
+				display: flex;
+				width: calc(250px * 8);
+			}
+			.slider.slider-reverse .slide-track {
+				width: calc(250px * 8);
+				-webkit-animation: scroll-reverse 35s linear infinite;
+				animation: scroll-reverse 35s linear infinite;
+			}
+			.slider .slide {
+				height: 150px;
+				margin: 0 4px;
+				position: relative;
+				width: 250px;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			.slider .slide img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			@media (max-width: 1920px) {
+				.slider {
+					width: calc(100% - 200px);
+				}
+				.slider .slide {
+					width: 450px;
+					height: 300px;
+				}
+				.slider .slide-track {
+					width: calc(450px * 8);
+				}
+				.slider.slider-reverse .slide-track {
+					width: calc(450px * 8);
+				}
+			}
+			@media (max-width: 1680px) {
+				.slider {
+					width: calc(100% - 150px);
+				}
+				.slider .slide {
+					width: 375px;
+					height: 250px;
+				}
+				.slider .slide-track {
+					width: calc(375px * 8);
+				}
+				.slider.slider-reverse .slide-track {
+					width: calc(375px * 8);
+				}
+			}
+			@media (max-width: 1440px) {
+				.slider {
+					width: calc(100% - 100px);
+				}
+				.slider .slide {
+					width: 300px;
+					height: 200px;
+				}
+				.slider .slide-track {
+					width: calc(300px * 8);
+				}
+				.slider.slider-reverse .slide-track {
+					width: calc(300px * 8);
+				}
+			}
+			@media (max-width: 1199px) {
+				.slider {
+					width: calc(100% - 70px);
+				}
+				.slider .slide {
+					width: 225px;
+					height: 150px;
+				}
+				.slider .slide-track {
+					width: calc(225px * 8);
+				}
+				.slider.slider-reverse .slide-track {
+					width: calc(225px * 8);
+				}
+			}
+			@media (max-width: 767px) {
+				.slider {
+					width: 100%;
+				}
+				.slider .slide {
+					width: 150px;
+					height: 100px;
+				}
+				.slider .slide-track {
+					width: calc(150px * 8);
+				}
+				.slider.slider-reverse .slide-track {
+					width: calc(150px * 8);
+				}
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<amp-story standalone title="I live in Nis" publisher="Alex C." supports-landscape>
+			<amp-story-page id="slide_0" auto-advance-after="2s">
+				<amp-story-grid-layer template="fill">
+					<amp-img src="../img/intro.jpg" width="1440" height="960"></amp-img>
+				</amp-story-grid-layer>
+				<amp-story-grid-layer template="vertical" class="gradient--top top" animate-in="fly-in-top" animate-in-duration="0.5s">
+					<div class="user-wrap" animate-in-duration="1s" animate-in="fade-in">
+						<div class="i-amphtml-story-bookend-article-image logo-txt">
+							<amp-img src="../img/girl.svg" width="45" height="45" class="cover-logo" id="logos-img"></amp-img>
+						</div>
+						<div class="i-amphtml-story-bookend-article-text-content extra">
+							<span class="name">Francessa Gennari</span>
+							<span class="font_body">Lonely Planet Editor</span>
+						</div>
+					</div>
+				</amp-story-grid-layer>
+				<amp-story-grid-layer template="vertical" class="gradient--bottom bottom" animate-in="fly-in-bottom" animate-in-duration="0.5s">
+					<div class="pg-headline"  animate-in-duration="1s" animate-in="fade-in">
+						<div id="italy_frame">
+							<p class="tagline"><span>ITALY</span></p>
+						</div>
+						<span class="tagbody">Italy's most seductive region</span>
+						<p class="byline">An ethereal lignt on Tuscan hills</p>
+					</div>
+				</amp-story-grid-layer>
+			</amp-story-page>
+
+			<amp-story-page id="slide_1" auto-advance-after="30s">
+				<amp-story-grid-layer template="fill">
+					<amp-video autoplay noaudio loop width="1440" height="960" class="mobile">
+						<source type="video/mp4" src="../video/video.MOV">
+					</amp-video>
+					<amp-video autoplay noaudio loop width="1440" height="960" class="desktop">
+						<source type="video/mp4" src="../video/video.mp4">
+					</amp-video>
+				</amp-story-grid-layer>
+				<amp-story-grid-layer template="vertical" class="gradient--top top">
+					<div class="user-wrap">
+						<div class="i-amphtml-story-bookend-article-image logo-txt">
+							<amp-img src="../img/girl.svg" width="45" height="45" class="cover-logo" id="logos-img"></amp-img>
+						</div>
+						<div class="i-amphtml-story-bookend-article-text-content extra">
+							<span class="name">Francessa Gennari</span>
+							<span class="font_body">Lonely Planet Editor</span>
+						</div>
+					</div>
+				</amp-story-grid-layer>
+				<amp-story-grid-layer template="vertical" class="gradient--bottom bottom">
+					<div class="pg-headline">
+						<div id="italy_frame">
+							<p class="tagline"><span>ITALY</span></p>
+						</div>
+						<span class="tagbody">Italy's most seductive region</span>
+						<p class="byline">An ethereal lignt on Tuscan hills</p>
+					</div>
+				</amp-story-grid-layer>
+			</amp-story-page>
+
+			<amp-story-page id="ken-burns-effect1">
+				<amp-story-grid-layer template="fill">
+					<div animate-in="zoom-out" animate-in-duration="5s">
+						<amp-img id="ken-burns-img1" src="../img/6W8A6061.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+					</div>
+				</amp-story-grid-layer>
+				<amp-story-page-attachment layout="nodisplay" theme="dark" data-title="Offer Title" data-cta-text="Swipe up to get more info">
+					<iframe class="embedly-embed full-height" src="https://www.novasol.de/ferienhaeuser/italien/toskana/ferienhaus-montepulciano-its971?adults=2&children=0&pets=0" height="100%" width="100%"></iframe>
+				</amp-story-page-attachment>
+			</amp-story-page>
+
+			<amp-story-page id="ken-burns-effect2">
+				<amp-story-grid-layer template="fill">
+					<div class="square" animate-in="fade-in" animate-in-duration="5s">
+						<amp-img id="ken-burns-img2" src="../img/6W8A6110.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+					</div>
+				</amp-story-grid-layer>
+				<amp-story-grid-layer template="vertical" class="gradient--top top" animate-in="fly-in-top" animate-in-duration="0.5s">
+					<div class="user-wrap" animate-in-duration="1s" animate-in="fade-in">
+						<div class="i-amphtml-story-bookend-article-text-content extra">
+							<span class="byline_piazza">TOP ATTRACTIONS</span>
+							<span class="font_body_piazza">2. Piazza del Campo del Siena Tuscany</span>
+							<span class="byline_piazza">Popularly known as 'Il Campo', this sloping piazza has been Siena's social centre since being staked out by the ruling Consiglio dei Nove (Council of Nine) in the mid-12th century.</span>
+						</div>
+					</div>
+				</amp-story-grid-layer>
+				<amp-story-page-attachment layout="nodisplay" theme="dark" data-title="Offer Title" data-cta-text="Learn More">
+					<iframe class="embedly-embed full-height" src="https://www.novasol.de/ferienhaeuser/italien/toskana/ferienhaus-montepulciano-its971?adults=2&children=0&pets=0" height="100%" width="100%"></iframe>
+				</amp-story-page-attachment>
+			</amp-story-page>
+
+			<amp-story-page id="ken-burns-effect3">
+				<amp-story-grid-layer template="fill">
+					<div style="background-color: white;"></div>
+				</amp-story-grid-layer>
+				<amp-story-grid-layer template="vertical" class="gradient--top top">
+					<div class="user-wrap">
+						<div class="i-amphtml-story-bookend-article-text-content extra">
+							<span class="name_lorem">Top Featured places to stay</span>
+							<span class="byline_lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat felis vel est mollis, at scelerisque nisi eleifend. Maecenas vitae urna mauris. Ut nec purus mi.</span>
+							<div class="slider">
+								<div class="slide-track">
+									<div class="slide">
+										<img src="../img/6W8A6061.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/6W8A6110.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/6W8A6117.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/6W8A6134.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/6W8A6221.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/DJI_0031.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/DJI_0058.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/intro.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="slider slider-reverse">
+								<div class="slide-track">
+									<div class="slide">
+										<img src="../img/6W8A6061.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/6W8A6110.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/6W8A6117.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/6W8A6134.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/6W8A6221.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/DJI_0031.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/DJI_0058.jpg" alt="" />
+									</div>
+									<div class="slide">
+										<img src="../img/intro.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</amp-story-grid-layer>
+				<amp-story-page-attachment layout="nodisplay" theme="dark" data-title="Offer Title" data-cta-text="See all offers">
+					<iframe class="embedly-embed full-height" src="https://www.novasol.de/ferienhaeuser/italien/toskana/ferienhaus-montepulciano-its971?adults=2&children=0&pets=0" height="100%" width="100%"></iframe>
+				</amp-story-page-attachment>
+			</amp-story-page>
+
+			<amp-story-page id="ken-burns-effect4">
+				<amp-story-grid-layer template="fill">
+					<div class="square" animate-in="fly-in-bottom">
+						<amp-img id="ken-burns-img4" src="../img/6W8A6134.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+					</div>
+				</amp-story-grid-layer>
+			</amp-story-page>
+
+			<amp-story-page id="ken-burns-effect5">
+				<amp-story-grid-layer template="fill">
+					<div class="square" animate-in="fly-in-top">
+						<amp-img id="ken-burns-img5" src="../img/6W8A6221.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+					</div>
+				</amp-story-grid-layer>
+			</amp-story-page>
+
+			<amp-story-page id="ken-burns-effect6">
+				<amp-story-grid-layer template="fill">
+					<div class="circle" animate-in="whoosh-in-left">
+						<amp-img id="ken-burns-img6" src="../img/DJI_0031.jpg" animate-in="pan-right" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+					</div>
+				</amp-story-grid-layer>
+			</amp-story-page>
+
+			<amp-story-page id="ken-burns-effect7">
+				<amp-story-grid-layer template="fill">
+					<div class="square" animate-in="whoosh-in-right">
+						<amp-img id="ken-burns-img6" src="../img/DJI_0058.jpg" animate-in="pan-left" animate-in-duration="5s" layout="fixed" width="1440" height="960"></amp-img>
+					</div>
+				</amp-story-grid-layer>
+			</amp-story-page>
+		</amp-story>
+	</body>
+</html>
